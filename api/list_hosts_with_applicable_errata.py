@@ -10,7 +10,7 @@ except ImportError:
   sys.exit(-1)
 
 # URL to your Satellite 6 server
-URL = "https://satellite.lab.kupo.se"
+URL = "https://satellite.example.com"
 # URL for the API to your deployed Satellite 6 server
 SAT_API = "%s/katello/api/v2/" % URL
 # Katello-specific API
