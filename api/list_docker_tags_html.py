@@ -27,7 +27,7 @@ def get_json(location):
   return r.json()
 
 def list_docker():
-  hosts = get_json(SAT_API + "docker_tags/")
+  hosts = get_json(SAT_API + "docker_tags/?per_page=99999")
   for host in hosts['results']:
     print "<tr>"
     print "<td>"
