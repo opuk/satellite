@@ -1,0 +1,5 @@
+Run in this order:
+
+* populate-docker.sh
+* enable_rpms.sh
+* populate_cv.sh
