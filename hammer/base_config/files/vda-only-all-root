@@ -1,0 +1,9 @@
+ignoredisk --only-use=vda
+clearpart --all 
+
+part /boot --fstype=xfs --size=512
+part pv.01 --grow --size=1
+volgroup vg0 --pesize=4096 pv.01
+logvol swap --name=swap --vgname=vg0 --size=2048
+logvol / --fstype=xfs --name=root --vgname vg0 --grow --size 1
+
