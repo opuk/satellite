@@ -28,7 +28,8 @@ hammer subscription upload --organization "$CUSTOMER_NAME" --file $MANIFEST
 hammer domain create --name $DOMAIN
 
 # Create subnet
-hammer subnet create --dns-primary $DNS1 --dns-secondary $DNS2 --name $NETNAME --network "$NETWORK" --mask $NETMASK --gateway $GATEWAY --domains "$DOMAIN" --from $DHCPSTART --to $DHCPSTOP --dhcp-id 1 --tftp-id 1
+#hammer subnet create --dns-primary $DNS1 --dns-secondary $DNS2 --name $NETNAME --network "$NETWORK" --mask $NETMASK --gateway $GATEWAY --domains "$DOMAIN" --from $DHCPSTART --to $DHCPSTOP --dhcp-id 1 --tftp-id 1
+hammer subnet create --dns-primary $DNS1 --dns-secondary $DNS2 --name $NETNAME --network "$NETWORK" --mask $NETMASK --gateway $GATEWAY --domains "$DOMAIN" --ipam "None"
 
 # Add domain, smart-proxy and subnet to organisation
 hammer organization add-domain --name "$CUSTOMER_NAME" --domain $DOMAIN
@@ -45,3 +46,7 @@ hammer lifecycle-environment create --name Dev --prior Library --organization "$
 hammer lifecycle-environment create --name QA --prior Dev --organization "$CUSTOMER_NAME"
 hammer lifecycle-environment create --name Prod --prior QA --organization "$CUSTOMER_NAME"
 
+#Create partition table
+hammer partition-table create --file files/vda-only-all-root --name "vda only, all root" --os-family Redhat
+#Associate partition table to OS
+hammer os add-ptable --title "RedHat 7.2" --partition-table "vda only, all root"
