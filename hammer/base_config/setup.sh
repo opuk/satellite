@@ -1,7 +1,7 @@
 #!/bin/bash
 
-CUSTOMER_NAME="Example INC"
-LOCATION="The Moon"
+CUSTOMER_NAME="Default Organization"
+LOCATION="Default Location"
 DOMAIN="example.com"
 MANIFEST=/root/manifest.zip
 
@@ -16,10 +16,10 @@ DHCPSTART=192.168.122.100
 DHCPSTOP=192.168.122.200
 
 # Create the $CUSTOMER_NAME Organisation
-hammer organization create --name "$CUSTOMER_NAME"
+#hammer organization create --name "$CUSTOMER_NAME"
 
 # Create the $LOCATION Location, one of the datacenters
-hammer location create --name "$LOCATION"
+#hammer location create --name "$LOCATION"
 
 # Upload the Satellite Manifest
 hammer subscription upload --organization "$CUSTOMER_NAME" --file $MANIFEST
