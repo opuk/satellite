@@ -50,4 +50,5 @@ hammer lifecycle-environment create --name Prod --prior QA --organization "$CUST
 hammer partition-table create --file files/vda-only-all-root --name "vda only, all root" --os-family Redhat
 hammer partition-table create --file files/sda-only-all-root --name "sda only, all root" --os-family Redhat
 #Associate partition table to OS
+hammer os add-ptable --title "RedHat 7.2" --partition-table "vda only, all root"
 hammer os add-ptable --title "RedHat 7.2" --partition-table "sda only, all root"
