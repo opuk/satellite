@@ -1,6 +1,8 @@
 #!/bin/bash
 
 SATELLITE=satellite.example.com
+ORG="Default_Organization"
+AK="Capsule-Activationkey"
 
 firewall-cmd --add-port="53/udp" --add-port="53/tcp" \
  --add-port="67/udp" --add-port="68/udp" \
@@ -16,6 +18,8 @@ firewall-cmd --add-port="53/udp" --add-port="53/tcp" \
  --add-port="8443/tcp" --add-port="9090/tcp"
 
 rpm -Uvh http://$SATELLITE/pub/katello-ca-consumer-latest.noarch.rpm
+
+subscription-manager register --org "${ORG}" --activationkey="${AK}"
 
 subscription-manager repos --disable "*"
 subscription-manager repos --enable rhel-7-server-rpms \
