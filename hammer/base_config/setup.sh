@@ -41,6 +41,9 @@ hammer location add-domain --name "$LOCATION" --domain $DOMAIN
 #hammer location add-smart-proxy --name $LOCATION --smart-proxy rhs.$CUSTOMER_NAME.domain
 hammer location add-subnet --name "$LOCATION" --subnet $NETNAME
 
+#Add location to organization
+hammer location add-organization --name "$LOCATION" --organization "$CUSTOMER_NAME"
+
 #Create basic lifecycle environment
 hammer lifecycle-environment create --name Dev --prior Library --organization "$CUSTOMER_NAME"
 hammer lifecycle-environment create --name QA --prior Dev --organization "$CUSTOMER_NAME"
