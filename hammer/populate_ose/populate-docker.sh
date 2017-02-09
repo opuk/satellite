@@ -19,6 +19,7 @@ PRODUCT_NAME="OCP Docker images"
 
 upstream_repos=( openshift3/ose-deployer \ 
      openshift3/ose-docker-registry \
+     openshift3/registry-console \
      openshift3/ose-pod \
      openshift3/ose-docker-builder \ 
      openshift3/ose-sti-builder \ 
@@ -39,9 +40,10 @@ upstream_repos=( openshift3/ose-deployer \
      openshift3/metrics-hawkular-metrics \
      openshift3/metrics-cassandra \
      openshift3/metrics-heapster \
-     openshift3/jenkins-1-rhel7 \
+     openshift3/jenkins-2-rhel7 \
      openshift3/image-inspector \
      openshift3/ose-recycler \
+     openshift3/jenkins-slave-base-rhel7 \
      rhscl/mariadb-101-rhel7 \
      rhscl/mongodb-26-rhel7 \
      rhscl/mongodb-32-rhel7 \

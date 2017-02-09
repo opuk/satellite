@@ -1,0 +1,24 @@
+---
+:settings:
+  :user: admin
+  :pass: password
+  :uri: https://localhost
+  :timeout: 300
+  :org: 1
+  :lifecycle: 2
+  :keep: 2
+:publish:
+  - RHEL7
+  - OpenShift
+  - Gluster
+:cv:
+  RHEL7: latest
+  OpenShift: latest
+  Gluster: latest
+#:ccv:
+#  CCV-OpenShift:
+#    RHEL7: latest
+#    OpenShift: latest
+:promote:
+  - CCV OpenShift
+  - CCV Gluster
