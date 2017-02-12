@@ -18,7 +18,11 @@ upstream_repos=( openshift3/ose-deployer \
      openshift3/metrics-deployer \
      openshift3/metrics-hawkular-metrics \
      openshift3/metrics-cassandra \
-     openshift3/metrics-heapster 
+     openshift3/metrics-heapster \
+     openshift3/ose \
+     openshift3/node \
+     openshift3/openvswitch \
+     rhel7/etcd
 )
 
 hammer product create --name "$PRODUCT_NAME" --organization-id $ORG_ID
