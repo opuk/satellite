@@ -22,7 +22,8 @@ upstream_repos=( openshift3/ose-deployer \
      openshift3/ose \
      openshift3/node \
      openshift3/openvswitch \
-     rhel7/etcd
+     rhel7/etcd \
+     openshift3/ose-keepalived-ipfailover
 )
 
 hammer product create --name "$PRODUCT_NAME" --organization-id $ORG_ID
