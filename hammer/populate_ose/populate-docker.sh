@@ -30,7 +30,9 @@ xpaas_images=( redhat-openjdk-18/openjdk18-openshift \
                redhat-sso-7/sso70-openshift \
                rhscl/postgresql-95-rhel7 \
                rhscl/nodejs-4-rhel7 \
-               rhscl/nodejs-6-rhel7 
+               rhscl/nodejs-6-rhel7 \
+               rhscl/python-27-rhel7 \
+               rhscl/python-35-rhel7
 )
 
 jenkins_images=( openshift3/jenkins-2-rhel7 \
