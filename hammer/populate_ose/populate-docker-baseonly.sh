@@ -10,12 +10,10 @@ upstream_repos=( openshift3/ose-deployer \
      openshift3/ose-docker-builder \ 
      openshift3/ose-sti-builder \ 
      openshift3/ose-haproxy-router \ 
-     openshift3/logging-deployment \
      openshift3/logging-elasticsearch \
      openshift3/logging-kibana \
      openshift3/logging-fluentd \
      openshift3/logging-auth-proxy \
-     openshift3/metrics-deployer \
      openshift3/metrics-hawkular-metrics \
      openshift3/metrics-cassandra \
      openshift3/metrics-heapster \
